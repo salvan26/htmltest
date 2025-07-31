@@ -133,11 +133,13 @@
           />
           <input type="text" value="ваше имя" class="form__field" />
           <label class="form__field_range-label"
-            >sed ut perspicialist, unde omnis iste natus<br />
-            <input type="range" class="form__field_range"
-          /></label>
-
-          <input class="form__field" />
+            ><span>sed ut perspicialist, unde omnis iste natus</span> 
+            <span class="range__persent">75%</span>
+            <input type="range" oninput="this.previousElementSibling.textContent=this.value+'%'" value="75" class="form__field_range"/>
+          </label>
+          <label for="file-input" class="file-upload-label">
+            <span class="file-upload-text">прикрепить файл</span>
+            <input id="file-input" type="file" class="file-upload-input"/>
         </section>
         <input />
       </form>
